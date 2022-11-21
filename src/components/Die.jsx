@@ -8,6 +8,10 @@ export default function Die (props) {
 
   return (
     <div className="die" style={dieStyles} onClick={() => props.handleHeld(props.id)}>
+      <img
+      src={`/src/assets/dice ${props.value}.png`}
+      alt="die image"
+      className={props.isHeld ? `die-image-filtered` : `die-image`}/>
       <h1>{props.value}</h1>
     </div>
   )

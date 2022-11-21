@@ -54,3 +54,17 @@ body {
   height: 20px;
   border-radius: 15px;
 }
+
+.die-image {
+  width: 30px;
+}
+
+.die-image-filtered {
+  width: 30px;
+  filter: invert(35%) sepia(80%) saturate(297%) hue-rotate(92deg) brightness(102%) contrast(91%);
+}
+
+
+.die > h1 {
+  display: none;
+}
