@@ -1,0 +1,56 @@
+body {
+  background-color: #0B2434;
+  font-family: 'Inter', sans-serif;
+}
+
+.tenzies-game {
+  background-color: #F5F5F5;
+  width: 620px;
+  height: 620px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tenzies-info {
+  text-align: center;
+  max-width: 250px;
+}
+
+.dice {
+  display: grid;
+  grid-template-columns: repeat(5, 80px) ;
+  gap: 15px;
+}
+
+.die {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 80px;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-roll {
+  width: 150px;
+  height: 50px;
+  background-color: #5035FF;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.die-1 {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+}
