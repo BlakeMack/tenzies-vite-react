@@ -8,6 +8,7 @@ import Confetti from 'react-confetti'
 function App() {
   const [dice, Setdice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
+  const [rollCount, SetRollCount] = useState(0)
 
   function allNewDice() {
     const newArray = []
@@ -29,8 +30,10 @@ function App() {
     //   )
     //   return newDice
     // }
+    SetRollCount(prevcount => prevcount + 1)
     if (tenzies) {
       Setdice(allNewDice)
+      SetRollCount(0)
     } else {
       Setdice(oldDice => oldDice.map(die => die.isHeld ? die : {...die, value: Math.ceil(Math.random() * 6)} ))
     }
@@ -75,6 +78,8 @@ function App() {
           each die to freeze at its current value
           between rolls
         </p>}
+        <p>Number of rolls: {rollCount}</p>
+        <p>Time taken:</p>
       </div>
       <div className='dice'>
         {diceElements}
